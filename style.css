@@ -1,19 +1,36 @@
 .container {
-    height: 100%;
     display: grid;
-    grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 40px auto 40px;
 }
 
 .header {
     grid-column: 1 / -1;
+    overflow: hidden;
+    //position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    //width: 100%; /* Full width */
+    
+    position: sticky; // See link
+    //top: 0; //to make it stick to the top of the screen
+    height: 100vh; // make the height equal to 100 view height
+     
 }
 
-.menu {}
+.shadow {
+
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+.menu {
+grid-column: 1 / 2;
+}
 
 .content {
     grid-column: 2 / -1;
+    height: 100%;
 }
 
 .footer {
@@ -31,13 +48,12 @@
 
 html, body {
   box-sizing: border-box;
-  background-color: #ffeead;
   height: 100%;
   margin: 0px;
 }
 
 .container > div:nth-child(1n) {
-  background-color: #96ceb4;  
+  background-color: #88d8b0;
 }
 
 .container > div:nth-child(3n) {
@@ -51,3 +67,5 @@ html, body {
 .container > div:nth-child(4n) {
   background-color: #ffcc5c;
 }
+
+
