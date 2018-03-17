@@ -12,6 +12,7 @@ $(window).scroll(function(e){
 
    if($(window).scrollTop() === 0) {
      $('body > div > div.header').removeClass('shadow');
+     $('body > div > div.header').addClass('noshadow');
      console.log('shadow removed');
    }
 

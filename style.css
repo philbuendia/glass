@@ -1,3 +1,4 @@
+
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -5,23 +6,36 @@
 }
 
 .header {
+    background-color: white;
     grid-column: 1 / -1;
     overflow: hidden;
-    //position: fixed; /* Set the navbar to fixed position */
+    /*position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
-    //width: 100%; /* Full width */
+    width: 100%; /* Full width */
     
     position: sticky; // See link
-    //top: 0; //to make it stick to the top of the screen
+    /*top: 0; //to make it stick to the top of the screen*/
     height: 100vh; // make the height equal to 100 view height
-     
+}
+
+.noshadow {
+  transition-duration: 0.2s;
+  transition-delay: 0.08s;
+    -webkit-box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3);
 }
 
 .shadow {
+  transition-duration: 0.4s;
+  transition-delay: 0.3s;
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
+
+
 
 .menu {
 grid-column: 1 / 2;
