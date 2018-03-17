@@ -14,14 +14,26 @@ var header = $('.header');
 $(window).scroll(function(e){
     if(header.offset.top !== 0){
         if(!header.hasClass('shadow')){
-            $('.container > div:nth-child(1n)').addClass('shadow');
+            $('body > div > div.header').addClass('shadow');
             console.log('with shadow');
         }
     }else{
-    	$('.container > div:nth-child(1n)').removeClass('shadow');
+    	$('body > div > div.header').removeClass('shadow');
         header.removeClass('shadow');
         console.log('shadow removed');
     }
+
+
+   if($(window).scrollTop() === 0) {
+     $('.container > div:nth-child(1n)').removeClass('shadow');
+     console.log('shadow removed');
+   }
+
+
+
+
+
+
 });
 
 
